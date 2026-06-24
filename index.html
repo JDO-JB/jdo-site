@@ -125,6 +125,19 @@
     letter-spacing: -0.01em;
     max-width: 16ch;
   }
+  .hero-row{
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+  }
+  .hero-logo{
+    width: 88px;
+    height: 88px;
+    object-fit: contain;
+    flex-shrink: 0;
+    margin-top: 4px;
+  }
+  .hero-content{ min-width: 0; }
   .hero p{
     margin-top: 18px;
     color: var(--text-dim);
@@ -278,6 +291,8 @@
   @media (max-width: 560px){
     .identity{ flex-direction: column; align-items: stretch; }
     .identity-text{ white-space: normal; word-break: break-all; }
+    .hero-row{ flex-direction: column; gap: 18px; }
+    .hero-logo{ width: 64px; height: 64px; }
   }
 </style>
 </head>
@@ -299,9 +314,14 @@
   </header>
 
   <section class="hero">
-    <div class="eyebrow"><span class="dot"></span> live on solana</div>
-    <h1>Validator infrastructure, kept simple and verifiable.</h1>
-    <p>JDO runs two validators on the Solana network — a mainnet validator carried over from Tour de SOL, and a long-running testnet validator from the same era. Identity keys for both are below.</p>
+    <div class="hero-row">
+      <img class="hero-logo" src="JDO-logo.png" alt="JDO logo">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="dot"></span> live on solana</div>
+        <h1>Validator infrastructure, kept simple and verifiable.</h1>
+        <p>JDO runs two validators on the Solana network — a mainnet validator carried over from Tour de SOL, and a long-running testnet validator from the same era. Identity keys for both are below.</p>
+      </div>
+    </div>
   </section>
 
   <section class="validators">
